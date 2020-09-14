@@ -1,0 +1,402 @@
+body {
+    background: lightgrey;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 90;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+body.sida1 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+header {
+    height: 60vw;
+    background: darkred;
+}
+
+
+.grid2x2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.grid2x2 > div:first-child {
+    background: turquoise;
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    display: flex;
+    flex-direction: column;
+}
+
+header.grid2x2 > div:first-child > div {
+    height: 50%;
+}
+header.grid2x2 > div:first-child > div:first-child {
+    box-sizing: border-box;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+header.grid2x2 > div:first-child > div:nth-child(2) {
+    width: 50%;
+    height: 100%;
+    justify-self: flex-end;
+    align-self: flex-start;
+    padding-left: 20%;
+}
+
+header.grid2x2 > div:first-child > div:nth-child(3) {
+    justify-self: flex-end;
+    align-self: flex-end;
+    box-sizing: border-box;
+    margin-right: 27%;
+    width: 50%;
+}
+header.grid2x2 > div:first-child > div:nth-child(3) img {
+    height: 100%;
+}
+
+header.grid2x2 > div:nth-child(2) {
+    background: darkorange;
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+}
+header.grid2x2 > div:nth-child(3) {
+    background: yellow;
+    grid-column: 3 / 5;
+    grid-row: 3 / 5;
+    height: auto;
+}
+
+white {
+    color: white;
+    
+}
+button {
+    position: relative;
+    left: 10%;
+    top: 130%;
+    padding: 4%;
+    z-index: 1;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: none;   
+    cursor: pointer;
+    transition: 0.6s;
+    box-shadow: 0px 3px #888888;
+}
+button:hover{
+    box-shadow: 0px 10px  #888888;
+    width: 125px;
+    height: 45px;
+}
+/* Header sida2 */
+
+header.gridrow5 {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+header.gridrow5 > div {
+    grid-column: 1 / 5;
+    grid-row: 1 / 5;
+    grid-column: 1 / 5;
+    background: turquoise;
+}
+
+
+header.grid2x2 > div .p2{
+    position: relative;
+    left: 30%;
+    top: 15vh;
+    font-size: 12px;
+    text-align: center;
+    width: 32vh;
+   
+}
+header.grid2x2 > div .h-2{
+    position: relative;
+    left: 30%;
+    top: 10vh;
+    width: 32vh;
+    color: white;   
+    text-align: center;
+}
+header.grid2x2 > div .p3{
+    position: relative;
+    left: 30%;
+    top: 15vh;
+    font-size: 12px;
+    text-align: center;
+    width: 32vh;
+   
+}
+header.grid2x2 > div .h-3{
+    position: relative;
+    left: 30%;
+    top: 10vh;
+    width: 32vh;
+    color: white;   
+    text-align: center;
+}
+
+/*nav */
+header > nav {
+    background: lightgrey;
+    grid-row: 5;
+    grid-column: 1 / 5;
+}
+ul{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    list-style-type: none;    
+   
+}
+li {
+    text-decoration: none;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}
+li a{
+  text-decoration: none;
+  color: #888888; 
+}
+.a-svart a{
+    font-weight: 800;
+    color: black;
+}
+header.grid2x2 > div h2{
+    position: relative;
+    font-size: 40px;
+}
+
+/* main sida 1 */
+main.sida1 {
+    height: 180vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main.sida1 > div {
+    height: 60vw;
+    width: 100%;
+}
+main.sida1 > div:first-child {
+    background: darkgrey;
+    width: 100%;
+}
+.gridodd2x2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 75% auto;
+    grid-template-areas: "left left right right" "bottom bottom bottom bottom";
+}
+.gridodd2x2 > div:first-child {
+    grid-area: left;
+    box-sizing: border-box;
+    padding: 20%;
+}
+.gridodd2x2 > div:nth-child(2) {
+    grid-area: right;
+    box-sizing: border-box;
+    padding: 20%;
+}
+
+.gridodd2x2 > div:nth-child(3) {
+    grid-area: bottom;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+.gridodd2x2 > div:nth-child(3) > div {
+    background: white;
+    width: 25%;
+    z-index : 1;
+    font-size: 7px;
+    text-align: center;
+    height: 30vw;
+}
+.gridodd2x2 > div:nth-child(3) > div > div {
+    position: relative;
+    left: 0px;
+    top: -5px;
+    z-index: 2;
+    width: 90%;
+    height: 35%;
+    margin: auto;
+    background: #add8e6;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    padding: 10%;
+}
+.gridodd2x2 > div:nth-child(3) > div > div img {
+    width: 45%;
+}
+
+
+main.sida1 > div:nth-child(2) {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20%;
+    text-align: center;
+    background: orange;
+}
+
+
+
+.grid3x2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid3x2 > div {
+    height: auto;
+}
+.grid3x2 > div:first-child {
+    background: turquoise;
+}
+.grid3x2 > div:nth-child(3) {
+    background: lightgrey;
+}
+.grid3x2 > div:nth-child(5) {
+    background: darkorange;
+}
+.grid3x2 > div:nth-child(even) {
+    background: white;
+}
+.grid3x2 > div .main-h2{
+    color: blue;
+}
+
+
+/* main sida 2 */
+
+main.sida2 {
+    height: 160vh;
+    width: 100%;
+    background: darkgrey;
+}
+main.sida2 div:first-child {
+    height: auto;
+}
+main.sida2 div:nth-child(2) {
+    width: 100%;
+}
+
+
+
+
+footer.sida1 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+footer.sida1 div:first-child {
+    background: darkgrey;
+    width: 100%;
+    height: 10vh;
+}
+footer.sida1 div:nth-child(2) {
+    background: grey;
+    width: 100%;
+    height: 60vh;
+}
+/* footer sida 2 */
+
+footer.sida2 {
+    height: 80vh;
+    background: grey;
+}
+
+/*
+
+@media only screen and (max-width: 601px) {
+    h2 {
+        font-size: 14px;
+    }
+    header p {
+        font-size: 8px;
+    }
+    button {
+        font-size: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+main div {
+    height: 33%;
+    width: 100%;
+}
+main div:first-child {
+    background: darkgrey;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 25%);
+}
+main div:first-child div:first-child {
+    background: red;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+main div:first-child div:nth-child(2) {
+    background: purple;
+    grid-column: 4 / 5;
+    grid-row: 1 / span 3;
+}
+main div:first-child div:nth-child(3) {
+    background: blue;
+    grid-column: 4;
+    grid-row: 4;
+}
+
+
+
+main div:nth-child(2) {
+    align-content: center;
+    text-align: center;
+    background: orange;
+}
+main div:nth-child(2) h2 {
+    color: white;
+}
+main div:nth-child(2) article {
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+main div:nth-child(2) article p {
+    font-size: 10px;
+}
+
+
+main div:nth-child(3) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50% 50%;
+}
+main div:nth-child(3) div:first-child {
+    background: turquoise;
+}
+main div:nth-child(3) div:nth-child(3) {
+    background: lightgrey;
+}
+main div:nth-child(3) div:nth-child(5) {
+    background: darkorange;
+}
+main div:nth-child(3) div:nth-child(even) {
+    background: white;
+}
+
+
