@@ -8,6 +8,7 @@ body {
     width: 90;
     box-sizing: border-box;
     overflow-y: scroll;
+   
 }
 body.sida1 {
     padding-left: 10%;
@@ -81,7 +82,12 @@ button {
     top: 130%;
     padding: 4%;
     z-index: 1;
+
+    font-size: clamp(1rem, 3.5vw, 1.2rem); 
+
+    /*
     font-size: 20px;
+    */
     background-color: white;
     border-radius: 20px;
     border: none;   
@@ -91,8 +97,7 @@ button {
 }
 button:hover{
     box-shadow: 0px 10px  #888888;
-    width: 125px;
-    height: 45px;
+   
 }
 /* Header sida2 */
 
@@ -164,14 +169,26 @@ li {
 li a{
   text-decoration: none;
   color: #888888; 
+  transition: 0.5s;
+  font-weight: 550;
 }
-.a-svart a{
-    font-weight: 800;
+
+li a:hover {
     color: black;
 }
+
+/*.a-svart a{
+    font-weight: 800;
+    color: black;
+}*/
+
 header.grid2x2 > div h2{
     position: relative;
+    font-size: clamp(1rem, 4vw, 4rem);
+
+    /*
     font-size: 40px;
+    */
 }
 
 /* main sida 1 */
@@ -247,8 +264,37 @@ main.sida1 > div:nth-child(2) {
     background: orange;
 }
 
+.gridodd2x2 > div .main-h2{
+    color: white;
+    width: 314px;
+    height: 140px;
+    font-size: clamp(1rem, 2.5vw, 3rem); 
+}
 
+.gridodd2x2 > div .main-p{
+    margin-top: 14%;
+    font-weight: 550;
+    font-size: clamp(1rem, 3.5vw, 1.2rem); 
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.6);
+}
 
+.gridodd2x2 > div .btn{
+    margin-top: 15%;
+    font-size: auto;
+    width: 10vw;
+}
+.gridodd2x2 > div h4{
+    font-size: 23px;
+}
+.gridodd2x2 > div p{
+    font-family: Fira Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 11px;
+line-height: 18px;
+color: rgba(0, 0, 0, 0.4);   
+}
 .grid3x2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -257,15 +303,27 @@ main.sida1 > div:nth-child(2) {
 
 .grid3x2 > div {
     height: auto;
+    text-align: center;
 }
+
+.grid3x2 > div p {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(105, 105, 105);
+    display: block;
+}
+
 .grid3x2 > div:first-child {
-    background: turquoise;
+    background: rgb(213, 236, 255);
+    text-align: center;
+    font-size: 30px;
 }
 .grid3x2 > div:nth-child(3) {
     background: lightgrey;
 }
+
 .grid3x2 > div:nth-child(5) {
-    background: darkorange;
+    background: rgb(226, 107, 52);
 }
 .grid3x2 > div:nth-child(even) {
     background: white;
@@ -274,20 +332,46 @@ main.sida1 > div:nth-child(2) {
     color: blue;
 }
 
+.grid3x2 > div h3 {
+    color: grey;
+    font-size: 40px;
+    display: block;
+    text-align: left;
+    padding: 20px 20px;
+}
+
+.grid3x2 > div h1 {
+    padding-top: 50px;
+} 
+
 
 /* main sida 2 */
 
 main.sida2 {
-    height: 160vh;
+    height: auto;
     width: 100%;
     background: darkgrey;
 }
-main.sida2 div:first-child {
-    height: auto;
-}
-main.sida2 div:nth-child(2) {
+main.sida2 > div:first-child {
+    height: 80vh;
     width: 100%;
+    box-sizing: border-box;
 }
+main.sida2 > div:nth-child(2) {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-image: url("img/karta.png");
+    background-size: cover;
+}
+main.sida2 > div:nth-child(2) > div {
+    background: orange;
+    width: 20%;
+    height: 20%;
+}
+
+
 
 
 
@@ -307,6 +391,13 @@ footer.sida1 div:nth-child(2) {
     width: 100%;
     height: 60vh;
 }
+
+footer.sida1 > div p{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
 /* footer sida 2 */
 
 footer.sida2 {
@@ -314,7 +405,100 @@ footer.sida2 {
     background: grey;
 }
 
+
+
+
+
+
+
+
+.röd-pil{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    justify-self: center;
+}
+
+#three {
+    background-color: rgb(189, 188, 188);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 100px;
+    color: rgb(250, 250, 250);
+}
+ 
+#three > .heading-text {
+    align-items: center;
+    font-size: 40px;
+}
+ 
+.contactform textarea {
+    width: 490px;
+    height: 150px;
+    padding: 10px;
+    
+    background-color: #fff;
+    font-size: 16px;
+    resize: none;
+    margin: 10px 0;
+    border: none;
+  }
+  
+.contactform input {
+      width: 500px;
+      height: 50px;
+      padding: 5px;
+      
+      font-size: 16px;
+      margin: 10px 0;
+      border: none;
+      background-color: #fff;
+  }
+ 
+.contactform {
+    color: honeydew;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contactform form {
+    display: flex;
+}
+
+ 
+.contactform button {
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 1px 1px grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    
+
+}
+ 
+.contactform label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*
+@media only screen and (max-width: 601px) {
+    header.grid2x2 > div h2 {
+        font-size: 14px;
+    }
+}
 
 @media only screen and (max-width: 601px) {
     h2 {
