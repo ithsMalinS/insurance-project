@@ -101,13 +101,11 @@ header.gridrow5 > div {
     justify-content: center;
     align-items: center;
 }
-
-
+/*
 header.grid2x2 > div .p2{
     font-size: 12px;
     text-align: center;
     width: 32vh;
-   
 }
 header.grid2x2 > div .h-2{
     width: 32vh;
@@ -125,6 +123,7 @@ header.grid2x2 > div .h-3{
     color: white;   
     text-align: center;
 }
+*/
 
 /*nav */
 header > nav {
@@ -178,7 +177,7 @@ main.sida1  {
 }
 
 main.sida1 > div {
-    /*height: 60vw;*/
+    height: 60vw;
     width: 100%;
 }
 main.sida1 > div:first-child {
@@ -228,7 +227,6 @@ main.sida1 > div:nth-child(3) {
     background: white;
     width: 25%;
     z-index : 1;
-    font-size: 7px;
     text-align: center;
     height: 60vh;
 }
@@ -351,16 +349,18 @@ main.sida2 > div:nth-child(2) {
     height: 80vh;
     width: 100%;
     display: flex;
-    flex-direction: row;
     background-image: url("img/karta.png");
     background-size: cover;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 main.sida2 > div:nth-child(2) > div:first-child {
     background: #FAB131;
     width: 40%;
     height: 50%;
     color: white;
+    opacity: 0.8;
+    margin-right: 5%;
 }
 
 
@@ -575,6 +575,7 @@ white {
         height: 45%;
         
     }
+    
 
     main.sida1  {
         display: grid;
@@ -582,6 +583,10 @@ white {
         width: 100%;
         /*display: flex;
         flex-direction: column;*/
+    }
+    main.sida1 > div {
+        height: auto;
+        width: 100%;
     }
     main.sida1 > div:nth-child(2) {
        
@@ -691,6 +696,16 @@ white {
     }
 } 
 
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
 /*
 /*
 /*
