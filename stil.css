@@ -820,8 +820,7 @@ white {
         height: 50%;
     }
     .gridodd2x2 > div .main-p{
-        margin-top: 45%;
-        
+        margin-top: 45%;  
     }
     header.gridrow5 > div:first-child {
         padding-left: 10%;
